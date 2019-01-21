@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UF2Activitat1</string>
+    <string name="frase">Do you know the way</string>
+    <string name="correcte">Correcte!</string>
+    <string name="malament">Has fallat!</string>
+
+
+
+</resources>
