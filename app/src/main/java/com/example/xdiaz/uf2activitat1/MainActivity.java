@@ -2,6 +2,7 @@ package com.example.xdiaz.uf2activitat1;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.support.constraint.Constraints;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView imatge4;
     boolean correcto=false;
     TextView texto;
+    ImageView animacio;
+
 
 
     @Override
@@ -31,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         imatge3 = (ImageView) findViewById(R.id.Kappa3);
         imatge4 = (ImageView) findViewById(R.id.Kappa4);
         texto=(TextView) findViewById(R.id.textView);
+        animacio=(ImageView)findViewById(R.id.gif);
+        AnimationDrawable gif=(AnimationDrawable)animacio.getDrawable();
+        gif.start();
 
 
 
@@ -75,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
           imatge4.setEnabled(false);
 
       }
-
-
 
     }
 
