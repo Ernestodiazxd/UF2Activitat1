@@ -4,11 +4,14 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
+import android.os.CountDownTimer;
 import android.support.constraint.Constraints;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -40,17 +43,40 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     }
 
     public void onClick1(View v) {
         imatge1.setImageResource(R.mipmap.charander);
         comprovacio(correcto);
+        new CountDownTimer(2000, 5000) { // 5000 = 5 sec
+
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                imatge1.setImageResource(R.mipmap.kappa);
+                texto.setText(R.string.frase);
+                texto.setTextColor(Color.BLACK);
+            }
+        }.start();
 
     }
 
     public void onClick2(View v) {
         imatge2.setImageResource(R.mipmap.caballito);
         comprovacio(correcto);
+        new CountDownTimer(2000, 5000) { // 5000 = 5 sec
+
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                imatge2.setImageResource(R.mipmap.kappa);
+                texto.setText(R.string.frase);
+                texto.setTextColor(Color.BLACK);
+            }
+        }.start();
 
     }
 
@@ -58,12 +84,25 @@ public class MainActivity extends AppCompatActivity {
         imatge3.setImageResource(R.mipmap.theway);
         correcto=true;
         comprovacio(correcto);
+        Animation animacioCorrecte=AnimationUtils.loadAnimation(getApplicationContext(),R.anim.animacio);
+        imatge3.startAnimation(animacioCorrecte);
 
     }
 
     public void onClick4(View v) {
         imatge4.setImageResource(R.mipmap.solaire);
         comprovacio(correcto);
+        new CountDownTimer(2000, 5000) { // 5000 = 5 sec
+
+            public void onTick(long millisUntilFinished) {
+            }
+
+            public void onFinish() {
+                imatge4.setImageResource(R.mipmap.kappa);
+                texto.setText(R.string.frase);
+                texto.setTextColor(Color.BLACK);
+            }
+        }.start();
     }
 
 
